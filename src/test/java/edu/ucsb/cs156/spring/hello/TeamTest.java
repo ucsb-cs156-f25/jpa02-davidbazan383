@@ -12,6 +12,7 @@ public class TeamTest {
     Team team3;
     Team team4;
     Team t;
+    Team team5;
 
 
     @BeforeEach
@@ -20,9 +21,11 @@ public class TeamTest {
         team2 = new Team("test-team");
         team3 = new Team("test-team");
         team4 = new Team("test-team");
+        team5 = new Team ("NotTest-team");
         team2.addMember("Bob");
         team3.addMember("Bob");
         team4.addMember("Carl");
+        team5.addMember("Bob");
         t = new Team("test-team");
     }
 
@@ -45,6 +48,7 @@ public class TeamTest {
         assertEquals(false,team.equals(15));
         assertEquals(true,team2.equals(team3));
         assertEquals(false,team2.equals(team4));
+        assertEquals(false,team2.equals(team5));
 
     }
     
